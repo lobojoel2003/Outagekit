@@ -1,0 +1,40 @@
+name: Bug report
+description: Something is wrong or confusing
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, what you expected and what you saw. Screenshots help.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Web app in a browser
+        - Installed web app
+        - Android app
+        - '@outagekit/runtime library'
+    validations:
+      required: true
+  - type: dropdown
+    id: safety
+    attributes:
+      label: Could this give someone a wrong runtime or wrong advice?
+      options:
+        - 'No'
+        - 'Yes'
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: From About → Version, e.g. "1.0.0 (build 12 · abc1234)"
+  - type: markdown
+    attributes:
+      value: Please do not include names, addresses or medical details.

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schema/power-sources.schema.json",
+  "updated": "2026-11-19",
+  "powerSources": [
+    {
+      "id": "generic-1kwh-lifepo4-power-station",
+      "name": "Power station, 1 kWh (LiFePO4)",
+      "manufacturer": null,
+      "kind": "power-station",
+      "capacityWh": 1024,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 1800,
+      "acSurgeWatts": 2700,
+      "cycleLifeTo80": 3000,
+      "notes": "Typical of 1 kWh LiFePO4 power stations.",
+      "sources": [{ "title": "Typical specification" }],
+      "verified": false
+    },
+    {
+      "id": "generic-12v-100ah-agm",
+      "name": "12 V 100 Ah AGM battery + 1000 W inverter",
+      "manufacturer": null,
+      "kind": "battery-inverter",
+      "capacityWh": 1200,
+      "chemistry": "agm",
+      "acOutputWatts": 1000,
+      "acSurgeWatts": 2000,
+      "cycleLifeTo80": null,
+      "notes": "Lead-acid loses capacity at high draw and in the cold.",
+      "sources": [{ "title": "12 V x 100 Ah nominal" }],
+      "verified": false
+    }
+  ]
+}

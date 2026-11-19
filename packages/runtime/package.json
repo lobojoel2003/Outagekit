@@ -1,0 +1,61 @@
+{
+  "name": "@outagekit/runtime",
+  "version": "1.0.0",
+  "description": "Battery runtime math for electricity-dependent medical equipment: device watts, duty cycle, inverter loss, battery age and cold-weather derating. Includes an open JSON catalog of common devices.",
+  "license": "MIT",
+  "type": "module",
+  "author": "Joel Stain Lobo",
+  "homepage": "https://github.com/lobojoel2003/Outagekit/tree/main/packages/runtime#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lobojoel2003/Outagekit.git",
+    "directory": "packages/runtime"
+  },
+  "bugs": "https://github.com/lobojoel2003/Outagekit/issues",
+  "keywords": [
+    "battery",
+    "runtime",
+    "power-outage",
+    "medical-devices",
+    "oxygen-concentrator",
+    "cpap",
+    "power-station",
+    "emergency-preparedness"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./catalog/devices.json": "./dist/catalog/devices.json",
+    "./catalog/power-sources.json": "./dist/catalog/power-sources.json",
+    "./schema/*": "./schema/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "schema",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "^5.1.1",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  }
+}

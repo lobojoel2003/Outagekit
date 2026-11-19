@@ -1,0 +1,97 @@
+{
+  "$schema": "../../schema/devices.schema.json",
+  "updated": "2026-11-19",
+  "devices": [
+    {
+      "id": "generic-oxygen-concentrator-5l",
+      "name": "Home oxygen concentrator (5 L/min)",
+      "manufacturer": null,
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        { "id": "2-lpm", "label": "2 L/min", "watts": 280 },
+        { "id": "5-lpm", "label": "5 L/min", "watts": 350 }
+      ],
+      "defaultSetting": "2-lpm",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": 700,
+      "internalBattery": null,
+      "notes": "Typical for 5 L/min stationary units. Check the label on yours.",
+      "sources": [{ "title": "Typical range for stationary 5 L/min concentrators" }],
+      "verified": false
+    },
+    {
+      "id": "generic-cpap",
+      "name": "CPAP machine",
+      "manufacturer": null,
+      "category": "cpap",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        { "id": "humidifier-on", "label": "Humidifier on", "watts": 55 },
+        { "id": "humidifier-off", "label": "Humidifier and heated tube off", "watts": 15 }
+      ],
+      "defaultSetting": "humidifier-on",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "The heated humidifier uses most of the power. Turn it off during an outage.",
+      "sources": [{ "title": "Typical range for modern CPAP machines" }],
+      "verified": false
+    },
+    {
+      "id": "generic-full-size-fridge",
+      "name": "Refrigerator (full size)",
+      "manufacturer": null,
+      "category": "refrigeration",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [{ "id": "running", "label": "Compressor running", "watts": 150 }],
+      "defaultSetting": "running",
+      "dutyCycle": 0.4,
+      "idleWatts": 2,
+      "surgeWatts": 1200,
+      "internalBattery": null,
+      "notes": "Keep the door shut. A full fridge stays cold for about 4 hours without power.",
+      "sources": [{ "title": "Typical for modern full-size refrigerators" }],
+      "verified": false
+    },
+    {
+      "id": "phone-charger",
+      "name": "Phone charging",
+      "manufacturer": null,
+      "category": "communication",
+      "supply": "dc",
+      "priority": "essential",
+      "settings": [{ "id": "charging", "label": "Charging", "watts": 10 }],
+      "defaultSetting": "charging",
+      "dutyCycle": 0.25,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Charge from the USB port; it wastes less than an AC plug.",
+      "sources": [{ "title": "Typical USB phone charging" }],
+      "verified": false
+    },
+    {
+      "id": "led-lamp",
+      "name": "LED lamp",
+      "manufacturer": null,
+      "category": "lighting",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [{ "id": "on", "label": "On", "watts": 9 }],
+      "defaultSetting": "on",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "",
+      "sources": [{ "title": "Typical 60 W-equivalent LED bulb" }],
+      "verified": false
+    }
+  ]
+}

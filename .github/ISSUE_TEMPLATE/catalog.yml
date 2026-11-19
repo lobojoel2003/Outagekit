@@ -1,0 +1,31 @@
+name: Catalog correction or new device
+description: Add a device or power station, or correct a figure
+labels: [catalog]
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device or power source
+      placeholder: e.g. Philips Respironics EverFlo
+    validations:
+      required: true
+  - type: textarea
+    id: figures
+    attributes:
+      label: Figures
+      description: Watts at each setting (or capacity and output for a power source), and how much of the time it runs.
+      placeholder: "2 L/min: 290 W\n5 L/min: 350 W"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Manufacturer source
+      description: Link to the manual or specification sheet, and the page or section.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: e.g. measured with a plug-in power meter, internal battery hours, outage tips.

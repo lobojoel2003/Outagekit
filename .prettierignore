@@ -1,0 +1,12 @@
+node_modules
+dist
+dev-dist
+coverage
+pnpm-lock.yaml
+apps/web/android
+playwright-report
+test-results
+LICENSE
+packages/runtime/LICENSE
+docs/catalog.md
+CHANGELOG.md
