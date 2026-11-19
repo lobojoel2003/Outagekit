@@ -26,7 +26,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Tag the commit
@@ -54,7 +54,7 @@ jobs:
       version: ${{ steps.version.outputs.version }}
       prerelease: ${{ steps.version.outputs.prerelease }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
@@ -82,7 +82,7 @@ jobs:
     env:
       VERSION: ${{ needs.verify.outputs.version }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
@@ -118,7 +118,7 @@ jobs:
       VERSION: ${{ needs.verify.outputs.version }}
       KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
@@ -174,7 +174,7 @@ jobs:
     env:
       VERSION: ${{ needs.verify.outputs.version }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: ${{ env.TAG }}
       - uses: actions/download-artifact@v4
@@ -237,7 +237,7 @@ jobs:
       - name: Skip when no npm token is configured
         if: env.NODE_AUTH_TOKEN == ''
         run: echo "NPM_TOKEN secret not set; skipping npm publish."
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         if: env.NODE_AUTH_TOKEN != ''
         with:
           ref: ${{ env.TAG }}
