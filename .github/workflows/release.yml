@@ -32,7 +32,7 @@ jobs:
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -59,7 +59,7 @@ jobs:
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -94,7 +94,7 @@ jobs:
         with:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -214,7 +214,7 @@ jobs:
           ref: ${{ env.TAG }}
       - uses: pnpm/action-setup@v4
         if: env.NODE_AUTH_TOKEN != ''
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         if: env.NODE_AUTH_TOKEN != ''
         with:
           node-version-file: .nvmrc
