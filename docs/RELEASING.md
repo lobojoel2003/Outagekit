@@ -43,6 +43,12 @@ One version number covers the web app, the Android app and the
 
    Tags with a suffix such as `v1.3.0-beta.1` are published as pre-releases.
 
+   **Without a local tag:** after step 2 is merged to `main`, open Actions →
+   **Release** → **Run workflow**, choose `main` and enter `v1.2.0`. The
+   workflow creates the annotated tag on the latest commit (as you) and then
+   builds and publishes the release. Running it for a tag that already exists
+   rebuilds that release.
+
 5. Pushing to `main` also redeploys the web app to GitHub Pages.
 
 ## Signing the Android app
@@ -76,4 +82,5 @@ step is skipped and the tarball is still attached to the GitHub release.
 ## Re-running a release
 
 Run the **Release** workflow manually from the Actions tab and enter an
-existing tag; it rebuilds and updates that release.
+existing tag; it rebuilds and updates that release. Tags pushed by the
+workflow itself do not start a second run.
