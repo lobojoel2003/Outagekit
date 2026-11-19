@@ -122,17 +122,20 @@ export function defaultSettings(): Settings {
 const EXAMPLE_DEVICES: Array<{
   ids: string[];
   setting?: string;
-  category: CatalogDevice['category'];
 }> = [
-  { ids: ['philips-everflo', 'generic-oxygen-concentrator-5l'], category: 'oxygen-concentrator' },
-  { ids: ['resmed-airsense-10', 'generic-cpap'], category: 'cpap' },
-  { ids: ['generic-full-size-fridge', 'generic-refrigerator'], category: 'refrigeration' },
-  { ids: ['generic-wifi-router-modem', 'wifi-router-modem'], category: 'communication' },
-  { ids: ['phone-charger', 'generic-phone-charger'], category: 'communication' },
-  { ids: ['led-lamp', 'generic-led-bulb'], category: 'lighting' },
+  { ids: ['inogen-at-home', 'generic-oxygen-concentrator-5l'], setting: '2-lpm' },
+  { ids: ['resmed-airsense-10', 'generic-cpap'] },
+  { ids: ['generic-refrigerator-full-size'] },
+  { ids: ['generic-wifi-router-modem'] },
+  { ids: ['generic-phone-charger'] },
+  { ids: ['generic-led-bulb'] },
 ];
 
-const EXAMPLE_SOURCES = ['ecoflow-delta-2', 'generic-1kwh-lifepo4-power-station'];
+// A generic battery keeps the example neutral between brands.
+const EXAMPLE_SOURCES = [
+  'generic-2kwh-lifepo4-power-station',
+  'generic-1kwh-lifepo4-power-station',
+];
 
 function firstDevice(ids: string[]): CatalogDevice | undefined {
   for (const id of ids) {

@@ -44,7 +44,7 @@ function device(item, uid, settingMatch) {
 
 const now = new Date();
 const concentrator = pick(['inogen-at-home'], (d) => d.category === 'oxygen-concentrator');
-const cpap = pick(['resmed-airsense-11', 'resmed-airsense-10'], (d) => d.category === 'cpap');
+const cpap = pick(['resmed-airsense-10'], (d) => d.category === 'cpap');
 const fridge = pick(
   ['generic-full-size-fridge', 'generic-refrigerator'],
   (d) => d.category === 'refrigeration',
@@ -55,7 +55,7 @@ const router = devices.find(
 const phone = devices.find((d) => d.category === 'communication' && /phone/i.test(d.name));
 const lamp = devices.find((d) => d.category === 'lighting');
 const station =
-  powerSources.find((p) => p.id === 'jackery-explorer-2000-plus') ??
+  powerSources.find((p) => p.id === 'generic-2kwh-lifepo4-power-station') ??
   powerSources.find((p) => p.kind === 'power-station' && p.capacityWh >= 1500) ??
   powerSources[0];
 
@@ -63,7 +63,7 @@ const demo = {
   schemaVersion: 1,
   devices: [
     device(concentrator, 'd1', /2 ?L/i),
-    device(cpap, 'd2', /humidif.*on|typical|with humid/i),
+    device(cpap, 'd2'),
     device(fridge, 'd3'),
     router && device(router, 'd4'),
     phone && device(phone, 'd5'),

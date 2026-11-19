@@ -19,7 +19,7 @@ An offline runtime calculator and one-page outage plan for people who depend on 
 [How the math works](docs/METHOD.md) ·
 [Device catalog](docs/catalog.md)
 
-<img src="docs/images/hero.png" alt="Outagekit showing a dial that reads: your setup runs 7 hours 20 minutes, next to the outage plan in order" width="900" />
+<img src="docs/images/hero.png" alt="Outagekit showing a dial that reads: your setup runs 7 hours 30 minutes, next to the outage plan in order" width="900" />
 
 </div>
 
@@ -68,6 +68,10 @@ is one, and it is free and open source.
     <td align="center">The fridge card (PDF)</td>
   </tr>
 </table>
+
+<p align="center">
+  <a href="docs/images/sample-fridge-card.pdf">Open a sample fridge card (PDF)</a>, made with fictional details.
+</p>
 
 <p align="center">
   <img src="docs/images/add-device.png" alt="Adding a device from the catalog: oxygen concentrators, CPAPs, ventilators and more, with their power draw" width="760" />

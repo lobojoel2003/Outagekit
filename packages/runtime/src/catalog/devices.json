@@ -3,94 +3,1485 @@
   "updated": "2026-11-19",
   "devices": [
     {
+      "id": "philips-everflo",
+      "name": "EverFlo",
+      "manufacturer": "Philips Respironics",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "any-flow",
+          "label": "Any flow, 0.5-5 L/min",
+          "watts": 350
+        }
+      ],
+      "defaultSetting": "any-flow",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Philips publishes one average figure (350 W, 120 V model) for all flows, so turning the flow down saves little. Keep backup oxygen cylinders: a 1 kWh battery runs this for under 3 hours.",
+      "sources": [
+        {
+          "title": "EverFlo brochure, 'EverFlo product specifications' (Average power consumption)",
+          "url": "https://www.documents.philips.com/doclib/enc/9801469/EverFlo_brochure.pdf",
+          "publisher": "Philips Respironics"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "invacare-perfecto2",
+      "name": "Perfecto2 (IRC5PO2 / IRC5P)",
+      "manufacturer": "Invacare",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "3-lpm",
+          "label": "3 L/min",
+          "watts": 280
+        }
+      ],
+      "defaultSetting": "3-lpm",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Invacare rates 280 W at 3 L/min (120 V model). The Perfecto2 V variant is listed by sellers at about 325 W, which was not confirmed in an Invacare document.",
+      "sources": [
+        {
+          "title": "Invacare Perfecto2 Oxygen Concentrator User Manual (1143482-H), 10.1 Specifications - Power Consumption",
+          "url": "https://au.healthcare.airliquide.com/sites/alh_au/files/2023-09/2.2.1-invacare-1143482.pdf",
+          "publisher": "Invacare"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "drive-devilbiss-525",
+      "name": "5 Liter (525 series)",
+      "manufacturer": "Drive DeVilbiss",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "1-2-lpm-or-less",
+          "label": "1.2 L/min or less",
+          "watts": 275
+        },
+        {
+          "id": "average",
+          "label": "Typical (average across flows)",
+          "watts": 310
+        }
+      ],
+      "defaultSetting": "average",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "US 120 V model: 310 W average, 275 W at 1.2 L/min and below (Turn-Down Technology lowers draw at low flow). 230 V/50 Hz models are rated about 290 W at 2 L/min and 312 W at 5 L/min.",
+      "sources": [
+        {
+          "title": "DeVilbiss 5 Liter Oxygen Concentrator (525DS) product page, Specifications - Power Consumption",
+          "url": "https://shop.drivemedical.com/us/en/p/525DS",
+          "publisher": "Drive DeVilbiss Healthcare"
+        },
+        {
+          "title": "Drive DeVilbiss Compact 525 5 Litre spec sheet, Technical specifications - Power consumption",
+          "url": "https://au.healthcare.airliquide.com/sites/alh_au/files/2026-03/drive_oxygen_concentrator_5l_525ks_spec_sheet.pdf",
+          "publisher": "Drive DeVilbiss International"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "caire-visionaire-5",
+      "name": "AirSep VisionAire 5",
+      "manufacturer": "CAIRE",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "any-flow",
+          "label": "Any flow, up to 5 L/min",
+          "watts": 290
+        }
+      ],
+      "defaultSetting": "any-flow",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "CAIRE lists a single 290 W figure (115 V/60 Hz and 230 V models), so lowering the flow does not save much power.",
+      "sources": [
+        {
+          "title": "VisionAire 5 User Manual (MN238), Specifications - Power Consumption / Electrical Requirements",
+          "url": "https://files.caireinc.com/Manuals/MN238.pdf",
+          "publisher": "CAIRE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "inogen-at-home",
+      "name": "At Home (GS-100)",
+      "manufacturer": "Inogen",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "2-lpm",
+          "label": "2 L/min",
+          "watts": 100
+        },
+        {
+          "id": "5-lpm",
+          "label": "5 L/min (rated maximum)",
+          "watts": 275
+        }
+      ],
+      "defaultSetting": "2-lpm",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Inogen states 100 W at flow setting 2; 275 W is the rated maximum and is used here for 5 L/min as a safe upper bound. Draw rises with the flow setting.",
+      "sources": [
+        {
+          "title": "Inogen At Home product page, 'Power Settings' (100W on Flow Setting 2)",
+          "url": "https://www.inogen.com/product/inogen-at-home-oxygen-concentrator/",
+          "publisher": "Inogen"
+        },
+        {
+          "title": "Inogen At Home User Manual, 9. Specifications, Model GS-100 (AC Power 275 W Max)",
+          "url": "https://www.inogen.com/pdf/Inogen%20At%20Home%20User%20Manual%20Multilingual.pdf",
+          "publisher": "Inogen"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "drive-devilbiss-1025",
+      "name": "10 Liter (1025 series)",
+      "manufacturer": "Drive DeVilbiss",
+      "category": "oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "average",
+          "label": "Typical (2-10 L/min average)",
+          "watts": 639
+        }
+      ],
+      "defaultSetting": "average",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "High-flow concentrators draw about twice as much as 5 L/min units; a 1.2-1.5 kWh power station runs this for under 2 hours. Plan on oxygen cylinders for long outages.",
+      "sources": [
+        {
+          "title": "DeVilbiss 10 Liter Oxygen Concentrator (1025DS) product page, Specifications - Power Input 639W (avg), 120VAC 60Hz",
+          "url": "https://shop.drivemedical.com/us/en/p/1025DS",
+          "publisher": "Drive DeVilbiss Healthcare"
+        }
+      ],
+      "verified": true
+    },
+    {
       "id": "generic-oxygen-concentrator-5l",
-      "name": "Home oxygen concentrator (5 L/min)",
+      "name": "Other stationary oxygen concentrator (5 L/min)",
       "manufacturer": null,
       "category": "oxygen-concentrator",
       "supply": "ac",
       "priority": "life-sustaining",
       "settings": [
-        { "id": "2-lpm", "label": "2 L/min", "watts": 280 },
-        { "id": "5-lpm", "label": "5 L/min", "watts": 350 }
+        {
+          "id": "2-lpm",
+          "label": "2 L/min",
+          "watts": 300
+        },
+        {
+          "id": "5-lpm",
+          "label": "5 L/min",
+          "watts": 350
+        }
       ],
       "defaultSetting": "2-lpm",
       "dutyCycle": 1,
       "idleWatts": 0,
-      "surgeWatts": 700,
+      "surgeWatts": null,
       "internalBattery": null,
-      "notes": "Typical for 5 L/min stationary units. Check the label on yours.",
-      "sources": [{ "title": "Typical range for stationary 5 L/min concentrators" }],
+      "notes": "For models not listed. Most 5 L/min stationary units draw 275 to 350 W at any flow; newer low-power designs draw far less. Check the label or manual for yours.",
+      "sources": [
+        {
+          "title": "Typical range of the manufacturer figures in this catalog (EverFlo, Perfecto2, DeVilbiss 525, VisionAire 5)"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "inogen-one-g5",
+      "name": "One G5",
+      "manufacturer": "Inogen",
+      "category": "portable-oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "setting-1",
+          "label": "Pulse setting 1",
+          "watts": 17
+        },
+        {
+          "id": "setting-2",
+          "label": "Pulse setting 2",
+          "watts": 22
+        },
+        {
+          "id": "setting-3",
+          "label": "Pulse setting 3 (estimate)",
+          "watts": 31
+        },
+        {
+          "id": "setting-5-6",
+          "label": "Pulse setting 5-6 (rough estimate)",
+          "watts": 50
+        }
+      ],
+      "defaultSetting": "setting-2",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 4.9,
+        "note": "single battery at setting 2 (Inogen); up to 6.25-6.5 h at setting 1; double battery up to 10.3 h at setting 2"
+      },
+      "notes": "Inogen does not publish running watts; these are estimated from its battery run times assuming a ~98 Wh single battery plus ~10% for the AC adapter. Draw is higher while the battery is charging, so run on the battery first and recharge when power is available.",
+      "sources": [
+        {
+          "title": "Inogen One G5 User Manual, 8. Specifications (power inputs, battery duration)",
+          "url": "https://cdn.inogen.com/pdf/Inogen%20One%20G5%20User%20Manual%20Multilingual.pdf",
+          "publisher": "Inogen"
+        },
+        {
+          "title": "Inogen One G5 Spec Sheet (battery duration on flow setting 1)",
+          "url": "https://cdn.inogen.com/wp-content/uploads/2024/09/Inogen-One-G5-Spec-Sheet.pdf",
+          "publisher": "Inogen"
+        },
+        {
+          "title": "How Many Hours Do Portable Oxygen Concentrators Last? (G5 battery duration on flow setting 2)",
+          "url": "https://www.inogen.com/resources/traveling-oxygen/how-many-hours-do-portable-oxygen-concentrators-last/",
+          "publisher": "Inogen"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "philips-simplygo",
+      "name": "SimplyGo",
+      "manufacturer": "Philips Respironics",
+      "category": "portable-oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "pulse-2",
+          "label": "Pulse setting 2 (estimate)",
+          "watts": 35
+        },
+        {
+          "id": "continuous-1-lpm",
+          "label": "Continuous 1 L/min (estimate)",
+          "watts": 65
+        },
+        {
+          "id": "continuous-2-lpm",
+          "label": "Continuous 2 L/min",
+          "watts": 120
+        }
+      ],
+      "defaultSetting": "pulse-2",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 3,
+        "note": "one battery, pulse setting 2 at 20 breaths/min; 1.6 h at continuous 1 L/min, 0.9 h at continuous 2 L/min"
+      },
+      "notes": "Philips lists 120 W while running and 150 W while also charging the battery; the pulse and 1 L/min figures are estimates scaled from Philips battery run times. Pulse mode uses far less power than continuous flow.",
+      "sources": [
+        {
+          "title": "SimplyGo specifications sheet (PN 1098670), Product specifications - Power consumption; Battery autonomy",
+          "url": "https://www.documents.philips.com/assets/20170523/b2ce19265736477f86aea77c01668826.pdf",
+          "publisher": "Philips Respironics"
+        },
+        {
+          "title": "SimplyGo User Manual, battery duration table and AC Power Module specifications",
+          "url": "https://www.documents.philips.com/doclib/enc/11407841/SimplyGo_User_Manual.pdf",
+          "publisher": "Philips Respironics"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "philips-simplygo-mini",
+      "name": "SimplyGo Mini",
+      "manufacturer": "Philips Respironics",
+      "category": "portable-oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "pulse-2",
+          "label": "Pulse setting 2",
+          "watts": 24
+        },
+        {
+          "id": "pulse-2-charging",
+          "label": "Pulse setting 2 while charging battery (max)",
+          "watts": 120
+        }
+      ],
+      "defaultSetting": "pulse-2",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 4.5,
+        "note": "standard battery at pulse setting 2, 20 breaths/min; up to 9 h with the extended battery"
+      },
+      "notes": "Running watts are derived from Philips figures (97.9 Wh standard battery lasts up to 4.5 h at setting 2) plus about 10% for the AC adapter. Draw can reach 120 W while it also charges its battery.",
+      "sources": [
+        {
+          "title": "SimplyGo Mini specification sheet, AC power (Power consumption 120 W while charging) and Battery (97.9 Wh; typical duration)",
+          "url": "https://www.documents.philips.com/assets/20170523/6514bf2564b443858970a77c01668627.pdf",
+          "publisher": "Philips Respironics"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "caire-freestyle-comfort",
+      "name": "FreeStyle Comfort",
+      "manufacturer": "CAIRE",
+      "category": "portable-oxygen-concentrator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "setting-1",
+          "label": "Pulse setting 1",
+          "watts": 13
+        },
+        {
+          "id": "setting-2",
+          "label": "Pulse setting 2",
+          "watts": 27
+        },
+        {
+          "id": "setting-3",
+          "label": "Pulse setting 3",
+          "watts": 35
+        },
+        {
+          "id": "setting-4",
+          "label": "Pulse setting 4",
+          "watts": 47
+        },
+        {
+          "id": "setting-5",
+          "label": "Pulse setting 5",
+          "watts": 53
+        }
+      ],
+      "defaultSetting": "setting-2",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 4,
+        "note": "single 8-cell battery at setting 2; double 16-cell battery up to 8 h; up to 8 h / 16 h at setting 1"
+      },
+      "notes": "Watts are estimated from CAIRE's battery-duration table assuming a 14.4 V x 6.7 Ah (about 96 Wh) pack plus ~10% adapter loss; CAIRE gives the mAh but not the pack voltage. Draw is higher while the battery charges.",
+      "sources": [
+        {
+          "title": "FreeStyle Comfort User Manual (MN250), Specifications (AC/DC power, battery capacity 6700 mAh) and battery duration table",
+          "url": "https://files.caireinc.com/Manuals/MN250.pdf",
+          "publisher": "CAIRE"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "resmed-airsense-10",
+      "name": "AirSense 10 AutoSet",
+      "manufacturer": "ResMed",
+      "category": "cpap",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "no-humidifier",
+          "label": "Humidifier and heated tube off",
+          "watts": 7
+        },
+        {
+          "id": "humidifier",
+          "label": "Humidifier on (level 6), standard tube",
+          "watts": 22
+        },
+        {
+          "id": "humidifier-heated-tube",
+          "label": "Humidifier on + ClimateLineAir heated tube",
+          "watts": 34
+        }
+      ],
+      "defaultSetting": "humidifier-heated-tube",
+      "dutyCycle": 1,
+      "idleWatts": 5,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "ResMed measured about 7 W for the machine alone versus 34 W with humidifier and heated tube (AutoSet 8-15 cm H2O). Turning both off during an outage makes a battery last about 5 times longer.",
+      "sources": [
+        {
+          "title": "Power consumption of Air10 devices (ResMed 1018673/1, 2015-03), AirSense 10 AutoSet rows, 'Power Consumed (Watt Hour)'",
+          "url": "https://document.resmed.com/documents/products/machine/air10-lumis-series/Power+consumption+Air10+devices.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "resmed-airsense-10-dc",
+      "name": "AirSense 10 on ResMed 12 V DC/DC converter",
+      "manufacturer": "ResMed",
+      "category": "cpap",
+      "supply": "dc",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "no-humidifier",
+          "label": "Humidifier off, SlimLine tube, 10 cm H2O",
+          "watts": 11.2
+        },
+        {
+          "id": "humidifier-4",
+          "label": "Humidifier level 4, 10 cm H2O",
+          "watts": 27.6
+        },
+        {
+          "id": "heated-tube-auto",
+          "label": "Heated tube + humidifier Auto, 10 cm H2O",
+          "watts": 45.2
+        },
+        {
+          "id": "heated-tube-max",
+          "label": "Heated tube 30°C + humidifier 8, 10 cm H2O",
+          "watts": 59
+        }
+      ],
+      "defaultSetting": "heated-tube-auto",
+      "dutyCycle": 1,
+      "idleWatts": 5,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "From ResMed's 12 V current-draw tables (0.93 A to 4.92 A at 10 cm H2O; higher pressures draw more). Running straight from 12 V through the ResMed converter avoids inverter losses; ResMed's battery sizes add a 50% safety margin.",
+      "sources": [
+        {
+          "title": "ResMed Battery guide (198103/4 2015-08), 'Air10 series' converter tables - current draw at 12 V DC",
+          "url": "https://document.resmed.com/en-au/documents/products/serviceandsupport/battery-guide/battery-guide_glo_eng.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "resmed-airsense-11",
+      "name": "AirSense 11",
+      "manufacturer": "ResMed",
+      "category": "cpap",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "no-humidifier",
+          "label": "Humidifier and heated tube off (estimate)",
+          "watts": 8
+        },
+        {
+          "id": "humidifier",
+          "label": "Humidifier on, standard tube (estimate)",
+          "watts": 22
+        },
+        {
+          "id": "humidifier-heated-tube",
+          "label": "Humidifier + heated tube (ResMed 'typical' rating)",
+          "watts": 56
+        }
+      ],
+      "defaultSetting": "humidifier-heated-tube",
+      "dutyCycle": 1,
+      "idleWatts": 5,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "ResMed lists 56.1 W typical and 73.2 W peak for the AirSense 11 with its 65 W supply; real use is probably lower. The two lower settings are estimates based on ResMed's AirSense 10 measurements. Turn off the humidifier and heated tube to stretch a battery.",
+      "sources": [
+        {
+          "title": "AirSense 11 User Guide (UK/EU), Technical specifications - 65W power supply unit (typical and peak power consumption)",
+          "url": "https://document.resmed.com/documents/products/machine/airsense-11/user-guide/398272_airsense11-uk-eu_user-guide_eur_mul.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "philips-dreamstation-2",
+      "name": "DreamStation 2 (Auto CPAP / CPAP Advanced)",
+      "manufacturer": "Philips Respironics",
+      "category": "cpap",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "no-humidifier",
+          "label": "Humidifier and heated tube off (estimate)",
+          "watts": 8
+        },
+        {
+          "id": "humidifier",
+          "label": "Humidifier on, standard tube (estimate)",
+          "watts": 30
+        },
+        {
+          "id": "humidifier-heated-tube",
+          "label": "Humidifier + heated tube (estimate)",
+          "watts": 50
+        }
+      ],
+      "defaultSetting": "humidifier-heated-tube",
+      "dutyCycle": 1,
+      "idleWatts": 2,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Philips publishes only the input rating (100-240 V, 2.0-1.0 A) and says an 80 W power supply is required for humidification; on a battery pack humidification is switched off. Watts are typical CPAP estimates, not Philips figures.",
+      "sources": [
+        {
+          "title": "DreamStation 2 CPAP Advanced user manual, Technical specifications - Electrical; 'Check Power' and battery notifications",
+          "url": "https://www.documents.philips.com/assets/Instruction%20for%20Use/20251030/c9c42c8a0ebf4f4d8fddb3860138cc7d.pdf",
+          "publisher": "Philips Respironics"
+        }
+      ],
       "verified": false
     },
     {
       "id": "generic-cpap",
-      "name": "CPAP machine",
+      "name": "Other CPAP machine",
       "manufacturer": null,
       "category": "cpap",
       "supply": "ac",
       "priority": "medical",
       "settings": [
-        { "id": "humidifier-on", "label": "Humidifier on", "watts": 55 },
-        { "id": "humidifier-off", "label": "Humidifier and heated tube off", "watts": 15 }
+        {
+          "id": "humidifier-on",
+          "label": "Humidifier and heated tube on",
+          "watts": 45
+        },
+        {
+          "id": "humidifier-off",
+          "label": "Humidifier and heated tube off",
+          "watts": 10
+        }
       ],
       "defaultSetting": "humidifier-on",
       "dutyCycle": 1,
       "idleWatts": 0,
       "surgeWatts": null,
       "internalBattery": null,
-      "notes": "The heated humidifier uses most of the power. Turn it off during an outage.",
-      "sources": [{ "title": "Typical range for modern CPAP machines" }],
+      "notes": "For models not listed. The heated humidifier and tube use most of the power; turning them off during an outage can make a battery last several times longer.",
+      "sources": [
+        {
+          "title": "Typical range of the ResMed and Philips figures in this catalog"
+        }
+      ],
       "verified": false
     },
     {
-      "id": "generic-full-size-fridge",
-      "name": "Refrigerator (full size)",
-      "manufacturer": null,
-      "category": "refrigeration",
+      "id": "resmed-aircurve-10-vauto",
+      "name": "AirCurve 10 VAuto",
+      "manufacturer": "ResMed",
+      "category": "bilevel",
       "supply": "ac",
-      "priority": "essential",
-      "settings": [{ "id": "running", "label": "Compressor running", "watts": 150 }],
-      "defaultSetting": "running",
-      "dutyCycle": 0.4,
-      "idleWatts": 2,
-      "surgeWatts": 1200,
-      "internalBattery": null,
-      "notes": "Keep the door shut. A full fridge stays cold for about 4 hours without power.",
-      "sources": [{ "title": "Typical for modern full-size refrigerators" }],
-      "verified": false
-    },
-    {
-      "id": "phone-charger",
-      "name": "Phone charging",
-      "manufacturer": null,
-      "category": "communication",
-      "supply": "dc",
-      "priority": "essential",
-      "settings": [{ "id": "charging", "label": "Charging", "watts": 10 }],
-      "defaultSetting": "charging",
-      "dutyCycle": 0.25,
-      "idleWatts": 0,
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "no-humidifier",
+          "label": "Humidifier and heated tube off",
+          "watts": 9
+        },
+        {
+          "id": "humidifier",
+          "label": "Humidifier on (level 6), standard tube",
+          "watts": 23
+        },
+        {
+          "id": "humidifier-heated-tube",
+          "label": "Humidifier on + ClimateLineAir heated tube",
+          "watts": 41
+        }
+      ],
+      "defaultSetting": "humidifier-heated-tube",
+      "dutyCycle": 1,
+      "idleWatts": 5,
       "surgeWatts": null,
       "internalBattery": null,
-      "notes": "Charge from the USB port; it wastes less than an AC plug.",
-      "sources": [{ "title": "Typical USB phone charging" }],
+      "notes": "ResMed test: VAuto, PS 6, max IPAP 25, min EPAP 8 cm H2O. The AirCurve 10 S measured 10 / 24 / 43 W for the same three setups; the heated tube and humidifier are most of the load.",
+      "sources": [
+        {
+          "title": "Power consumption of Air10 devices (ResMed 1018673/1, 2015-03), AirCurve 10 VAuto and AirCurve 10 S rows",
+          "url": "https://document.resmed.com/documents/products/machine/air10-lumis-series/Power+consumption+Air10+devices.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "philips-trilogy-evo",
+      "name": "Trilogy Evo",
+      "manufacturer": "Philips Respironics",
+      "category": "ventilator",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "typical",
+          "label": "Typical home settings (estimate)",
+          "watts": 15
+        },
+        {
+          "id": "high",
+          "label": "High pressures / large leak (estimate)",
+          "watts": 30
+        }
+      ],
+      "defaultSetting": "typical",
+      "dutyCycle": 1,
+      "idleWatts": 5,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 15,
+        "note": "internal + detachable battery, 7.5 h each (Philips nominal per IEC 80601-2-72: AC-VC, active flow circuit, PEEP 3 cm H2O, Vt 800 mL)"
+      },
+      "notes": "Philips publishes battery run time but not average watts; the watts are estimates. Recharging both batteries after an outage adds a large extra load (detachable 0-80% in 2.5 h). A charged spare detachable battery is hot-swappable.",
+      "sources": [
+        {
+          "title": "Trilogy Evo Accessory guide, 'Trilogy Evo detachable battery (1127889)'",
+          "url": "https://www.documents.philips.com/assets/20191022/994bbcf2b9bd45de8f1baaee00dfa0da.pdf",
+          "publisher": "Philips Respironics"
+        },
+        {
+          "title": "Trilogy EV300 specification sheet (same platform), Electrical - AC/DC input, internal and detachable batteries",
+          "url": "https://www.documents.philips.com/assets/20200722/262360678e1e4378984bac0000e9ce6b.pdf",
+          "publisher": "Philips Respironics"
+        }
+      ],
       "verified": false
     },
     {
-      "id": "led-lamp",
-      "name": "LED lamp",
-      "manufacturer": null,
-      "category": "lighting",
+      "id": "resmed-astral-150",
+      "name": "Astral 100 / 150",
+      "manufacturer": "ResMed",
+      "category": "ventilator",
       "supply": "ac",
-      "priority": "comfort",
-      "settings": [{ "id": "on", "label": "On", "watts": 9 }],
-      "defaultSetting": "on",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "typical",
+          "label": "Typical settings",
+          "watts": 14
+        },
+        {
+          "id": "worst-case",
+          "label": "Worst case (high pressure, double limb)",
+          "watts": 27
+        }
+      ],
+      "defaultSetting": "typical",
+      "dutyCycle": 1,
+      "idleWatts": 3,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 8,
+        "note": "new 95 Wh internal battery under typical conditions (ACV, Vt 800 mL, PEEP 5, rate 20); more than 4 h worst case"
+      },
+      "notes": "Derived from ResMed figures (95 Wh battery lasts 8 h typical, >4 h worst case) plus ~15% for the power supply. ResMed says the internal battery is not a primary power source; expect up to 90 W (120 W peak) while it recharges after an outage.",
+      "sources": [
+        {
+          "title": "Astral 100/150 User Guide (APAC), Technical specifications - Power supply, Internal Battery; 'Using the internal battery'",
+          "url": "https://document.resmed.com/documents/products/machine/astral-series/user-guide/278660_astral-100-150_user-guide_apac_multi.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "generic-full-electric-bed",
+      "name": "Full-electric home care bed",
+      "manufacturer": null,
+      "category": "bed",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "moving",
+          "label": "Motor running (raising/lowering)",
+          "watts": 200
+        }
+      ],
+      "defaultSetting": "moving",
+      "dutyCycle": 0.005,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical for home care bed motors; draw is brief and only while a motor runs. Lower the bed to a safe height before a forecast outage; some beds have a manual crank or battery backup.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-alternating-pressure-pump",
+      "name": "Alternating-pressure mattress pump",
+      "manufacturer": null,
+      "category": "mattress",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Pump running",
+          "watts": 15
+        }
+      ],
+      "defaultSetting": "running",
       "dutyCycle": 1,
       "idleWatts": 0,
       "surgeWatts": null,
       "internalBattery": null,
-      "notes": "",
-      "sources": [{ "title": "Typical 60 W-equivalent LED bulb" }],
+      "notes": "Typical small alternating-pressure pumps draw 5-20 W; check the pump label. Some air cells hold air for hours without power (Drive says up to 24 h for its Med-Aire Plus), but pressure relief stops, so reposition the person regularly.",
+      "sources": [
+        {
+          "title": "Med-Aire Plus 8\" Alternating Pressure and Low Air Loss Mattress System (14029) spec sheet - power outage protection",
+          "url": "https://shop.drivemedical.com/us/en/products/pressure-prevention/group-2-surfaces/med-aire-plus-8-alternating-pressure-and-low-air-loss-mattress-system/p/14029/downloadPdf",
+          "publisher": "Drive DeVilbiss Healthcare"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-low-air-loss-mattress",
+      "name": "Low-air-loss mattress pump",
+      "manufacturer": null,
+      "category": "mattress",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Pump running",
+          "watts": 60
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical range 20-120 W because these pumps move more air than alternating-pressure pumps. If the label lists only amps, volts x amps gives an upper bound.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-patient-lift-charger",
+      "name": "Patient lift battery charger",
+      "manufacturer": null,
+      "category": "mobility",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "charging",
+          "label": "Charging lift battery",
+          "watts": 30
+        }
+      ],
+      "defaultSetting": "charging",
+      "dutyCycle": 0.1,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical for lift chargers; a full lift battery usually covers many transfers. Charge it fully before a forecast outage.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-suction-machine",
+      "name": "Home suction machine",
+      "manufacturer": null,
+      "category": "suction",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "portable",
+          "label": "Portable unit running",
+          "watts": 35
+        },
+        {
+          "id": "heavy-duty",
+          "label": "Heavy-duty unit running",
+          "watts": 120
+        }
+      ],
+      "defaultSetting": "portable",
+      "dutyCycle": 0.02,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical values (portable units such as the Vacu-Aide QSU are listed by sellers at 33 W max). Use is brief but critical; many portable units have an internal battery, so keep it charged.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-nebulizer-compressor",
+      "name": "Nebulizer compressor",
+      "manufacturer": null,
+      "category": "nebulizer",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "During a treatment",
+          "watts": 60
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 0.042,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical piston compressors draw 40-100 W only during treatments (duty cycle assumes 4 x 15 min a day). Battery mesh nebulizers use only a few watts.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "cardinal-kangaroo-joey",
+      "name": "Kangaroo Joey enteral feeding pump",
+      "manufacturer": "Cardinal Health",
+      "category": "feeding-pump",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Running on AC",
+          "watts": 5
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 1,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": {
+        "hours": 18,
+        "note": "new, fully charged battery at 125 mL/h, as listed by distributors; not confirmed in a Cardinal Health document"
+      },
+      "notes": "Typical for small feeding pumps; most runs come from the internal battery. Keep it plugged in until the outage and recharge it first when power returns.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-ambulatory-infusion-pump",
+      "name": "Home infusion pump",
+      "manufacturer": null,
+      "category": "infusion-pump",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Running / charging",
+          "watts": 5
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 1,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical; most home infusion pumps run on internal or AA batteries and draw a few watts when charging. Keep spare batteries as your provider advises.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "baxter-homechoice-claria",
+      "name": "HomeChoice Claria APD cycler",
+      "manufacturer": "Baxter",
+      "category": "dialysis",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "treatment",
+          "label": "During overnight treatment",
+          "watts": 150
+        }
+      ],
+      "defaultSetting": "treatment",
+      "dutyCycle": 0.4,
+      "idleWatts": 2,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Rough estimate (the dialysate warmer dominates); check the rating label on your cycler. Ask your PD nurse about manual exchanges for long outages.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "nxstage-system-one",
+      "name": "System One",
+      "manufacturer": "NxStage (Fresenius Medical Care)",
+      "category": "dialysis",
+      "supply": "ac",
+      "priority": "life-sustaining",
+      "settings": [
+        {
+          "id": "treatment",
+          "label": "During treatment",
+          "watts": 300
+        }
+      ],
+      "defaultSetting": "treatment",
+      "dutyCycle": 0.125,
+      "idleWatts": 5,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Rough estimate (fluid warmer plus pumps); check the rating label. A full session may need 1 kWh or more, so contact your dialysis center about outage plans.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-power-wheelchair-charger",
+      "name": "Power wheelchair charger (24 V)",
+      "manufacturer": null,
+      "category": "mobility",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "overnight-average",
+          "label": "Average over a full overnight charge",
+          "watts": 100
+        },
+        {
+          "id": "bulk-charge",
+          "label": "Early charge (bulk stage)",
+          "watts": 250
+        }
+      ],
+      "defaultSetting": "overnight-average",
+      "dutyCycle": 0.35,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical for 24 V, 8-10 A chargers: draw is highest at the start and tapers off. Top up whenever power is available rather than waiting for empty.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-mobility-scooter-charger",
+      "name": "Mobility scooter charger",
+      "manufacturer": null,
+      "category": "mobility",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "charging",
+          "label": "Charging",
+          "watts": 100
+        }
+      ],
+      "defaultSetting": "charging",
+      "dutyCycle": 0.3,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical for 24 V, 3-5 A scooter chargers. Charge fully before a forecast outage.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-pulse-oximeter-monitor",
+      "name": "Bedside pulse oximetry monitor",
+      "manufacturer": null,
+      "category": "monitor",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "monitoring",
+          "label": "Monitoring",
+          "watts": 6
+        }
+      ],
+      "defaultSetting": "monitoring",
+      "dutyCycle": 1,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical; many bedside monitors have an internal battery good for several hours. A fingertip oximeter on AAA batteries is a useful backup.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-apnea-monitor",
+      "name": "Infant apnea monitor",
+      "manufacturer": null,
+      "category": "monitor",
+      "supply": "ac",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "monitoring",
+          "label": "Monitoring",
+          "watts": 4
+        }
+      ],
+      "defaultSetting": "monitoring",
+      "dutyCycle": 1,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical; most apnea monitors have a rechargeable battery. Check its run time in your monitor's manual and keep it charged.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-refrigerator-full-size",
+      "name": "Full-size refrigerator",
+      "manufacturer": null,
+      "category": "refrigeration",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "compressor-running",
+          "label": "Compressor running",
+          "watts": 150
+        }
+      ],
+      "defaultSetting": "compressor-running",
+      "dutyCycle": 0.4,
+      "idleWatts": 2,
+      "surgeWatts": 800,
+      "internalBattery": null,
+      "notes": "Typical: averages about 50-70 W over a day for a newer model; older units use more, and start-up surge needs inverter headroom. Keep the door shut: a closed fridge stays cold about 4 hours unpowered.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-mini-fridge",
+      "name": "Mini fridge (compact)",
+      "manufacturer": null,
+      "category": "refrigeration",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "compressor-running",
+          "label": "Compressor running",
+          "watts": 70
+        }
+      ],
+      "defaultSetting": "compressor-running",
+      "dutyCycle": 0.4,
+      "idleWatts": 1,
+      "surgeWatts": 300,
+      "internalBattery": null,
+      "notes": "Typical for compact compressor fridges (about 25-30 W averaged over a day). Useful for keeping insulin and other medicines cold.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-medication-cooler-12v",
+      "name": "12 V medication cooler",
+      "manufacturer": null,
+      "category": "refrigeration",
+      "supply": "dc",
+      "priority": "medical",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Cooling",
+          "watts": 15
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 0.5,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical for small 12 V compressor coolers (10-50 W while running). Thermoelectric (Peltier) coolers run almost continuously and use more overall; check storage temperatures with your pharmacist.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-phone-charger",
+      "name": "Phone charger",
+      "manufacturer": null,
+      "category": "communication",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "charging",
+          "label": "Charging a phone",
+          "watts": 10
+        }
+      ],
+      "defaultSetting": "charging",
+      "dutyCycle": 0.1,
+      "idleWatts": 0.1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. Charge from a power station's USB ports to skip inverter losses.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-wifi-router-modem",
+      "name": "Wi-Fi router + modem",
+      "manufacturer": null,
+      "category": "communication",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "running",
+          "label": "Router and modem on",
+          "watts": 15
+        }
+      ],
+      "defaultSetting": "running",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical combined draw. Many routers and modems use 12 V adapters, so a DC cable from a power station avoids inverter losses; internet may still be down if the provider loses power.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-led-bulb",
+      "name": "LED bulb",
+      "manufacturer": null,
+      "category": "lighting",
+      "supply": "ac",
+      "priority": "essential",
+      "settings": [
+        {
+          "id": "60w-equivalent",
+          "label": "60 W-equivalent LED (800 lm)",
+          "watts": 9
+        }
+      ],
+      "defaultSetting": "60w-equivalent",
+      "dutyCycle": 0.25,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. Battery lanterns and headlamps save the power station for medical equipment.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-laptop",
+      "name": "Laptop",
+      "manufacturer": null,
+      "category": "communication",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "charging-in-use",
+          "label": "In use and charging",
+          "watts": 60
+        },
+        {
+          "id": "light-use",
+          "label": "Light use, battery full",
+          "watts": 20
+        }
+      ],
+      "defaultSetting": "charging-in-use",
+      "dutyCycle": 0.25,
+      "idleWatts": 1,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. A USB-C laptop charged from a power station's USB-C port wastes less power than the AC adapter.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-box-fan",
+      "name": "Box fan (20 in)",
+      "manufacturer": null,
+      "category": "climate",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "low",
+          "label": "Low",
+          "watts": 45
+        },
+        {
+          "id": "high",
+          "label": "High",
+          "watts": 75
+        }
+      ],
+      "defaultSetting": "low",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. A small USB or 12 V fan uses 3-10 W and may be enough near a bed.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-room-humidifier",
+      "name": "Room humidifier",
+      "manufacturer": null,
+      "category": "climate",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "ultrasonic",
+          "label": "Ultrasonic (cool mist)",
+          "watts": 30
+        },
+        {
+          "id": "evaporative",
+          "label": "Evaporative (fan type)",
+          "watts": 60
+        },
+        {
+          "id": "warm-mist",
+          "label": "Warm mist (steam)",
+          "watts": 350
+        }
+      ],
+      "defaultSetting": "ultrasonic",
+      "dutyCycle": 1,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. Warm-mist (boiling) humidifiers use about 10 times more than ultrasonic models; avoid them on battery power.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-electric-blanket",
+      "name": "Electric blanket / heated throw",
+      "manufacturer": null,
+      "category": "climate",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "low",
+          "label": "Low",
+          "watts": 40
+        },
+        {
+          "id": "high",
+          "label": "High",
+          "watts": 100
+        }
+      ],
+      "defaultSetting": "low",
+      "dutyCycle": 0.6,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "Typical. Keeps a person warm for a small fraction of a space heater's power.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-space-heater",
+      "name": "Electric space heater",
+      "manufacturer": null,
+      "category": "climate",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "low",
+          "label": "Low",
+          "watts": 750
+        },
+        {
+          "id": "high",
+          "label": "High",
+          "watts": 1500
+        }
+      ],
+      "defaultSetting": "high",
+      "dutyCycle": 0.7,
+      "idleWatts": 0,
+      "surgeWatts": null,
+      "internalBattery": null,
+      "notes": "1500 W is the usual maximum for a US plug-in heater; it overloads many power stations and empties a 1 kWh battery in well under an hour. Use blankets or an electric blanket and warm one small room instead.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-window-ac",
+      "name": "Window air conditioner",
+      "manufacturer": null,
+      "category": "climate",
+      "supply": "ac",
+      "priority": "comfort",
+      "settings": [
+        {
+          "id": "5000-btu",
+          "label": "Small 5,000 BTU unit",
+          "watts": 450
+        },
+        {
+          "id": "8000-btu",
+          "label": "8,000 BTU unit",
+          "watts": 700
+        }
+      ],
+      "defaultSetting": "5000-btu",
+      "dutyCycle": 0.6,
+      "idleWatts": 2,
+      "surgeWatts": 1500,
+      "internalBattery": null,
+      "notes": "Typical; the compressor start-up surge can trip smaller power stations (inverter-type units surge less). For heat-sensitive people, cool one small room and use fans.",
+      "sources": [
+        {
+          "title": "Typical value; check the label or manual for your device"
+        }
+      ],
       "verified": false
     }
   ]

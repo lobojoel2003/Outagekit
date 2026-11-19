@@ -10,15 +10,251 @@
       "capacityWh": 1024,
       "chemistry": "lifepo4",
       "acOutputWatts": 1800,
-      "acSurgeWatts": 2700,
+      "acSurgeWatts": null,
       "cycleLifeTo80": 3000,
-      "notes": "Typical of 1 kWh LiFePO4 power stations.",
-      "sources": [{ "title": "Typical specification" }],
+      "notes": "Typical of 1 kWh LiFePO4 power stations. Pick your exact model if it is listed.",
+      "sources": [
+        {
+          "title": "Typical of the 1 kWh power stations in this catalog"
+        }
+      ],
       "verified": false
     },
     {
-      "id": "generic-12v-100ah-agm",
-      "name": "12 V 100 Ah AGM battery + 1000 W inverter",
+      "id": "generic-2kwh-lifepo4-power-station",
+      "name": "Power station, 2 kWh (LiFePO4)",
+      "manufacturer": null,
+      "kind": "power-station",
+      "capacityWh": 2048,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 2400,
+      "acSurgeWatts": null,
+      "cycleLifeTo80": 3000,
+      "notes": "Typical of 2 kWh LiFePO4 power stations. Pick your exact model if it is listed.",
+      "sources": [
+        {
+          "title": "Typical of the 2 kWh power stations in this catalog"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "jackery-explorer-300-v2",
+      "name": "Explorer 300 v2",
+      "manufacturer": "Jackery",
+      "kind": "power-station",
+      "capacityWh": 288,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 300,
+      "acSurgeWatts": 600,
+      "cycleLifeTo80": null,
+      "notes": "Jackery rates 4,000 cycles to 70% capacity (not 80%). Enough for a CPAP without humidifier for several nights, too small for a stationary oxygen concentrator. The older Explorer 300 (293 Wh, lithium-ion) is a different model.",
+      "sources": [
+        {
+          "title": "Jackery Explorer 300 v2 product page (description and specs: 288Wh, 300W/600W surge, cycle life)",
+          "url": "https://www.jackery.com/products/jackery-explorer-300-v2-portable-power-station",
+          "publisher": "Jackery"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "jackery-explorer-1000-plus",
+      "name": "Explorer 1000 Plus",
+      "manufacturer": "Jackery",
+      "kind": "power-station",
+      "capacityWh": 1264,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 2000,
+      "acSurgeWatts": 4000,
+      "cycleLifeTo80": null,
+      "notes": "Jackery rates 4,000 cycles to 70%+ capacity. Expandable with add-on battery packs.",
+      "sources": [
+        {
+          "title": "Jackery Explorer 1000 Plus product page (specs: 1264Wh, 2000W rated / 4000W surge peak, cycle life)",
+          "url": "https://www.jackery.com/products/jackery-explorer-1000-plus-portable-power-station",
+          "publisher": "Jackery"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "jackery-explorer-2000-plus",
+      "name": "Explorer 2000 Plus",
+      "manufacturer": "Jackery",
+      "kind": "power-station",
+      "capacityWh": 2042,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 3000,
+      "acSurgeWatts": 6000,
+      "cycleLifeTo80": null,
+      "notes": "Jackery's page limits appliances to 3000 W and says it powers heavy-duty devices up to 6000 W (peak); about 4,000 cycles to 70% capacity. Expandable with battery packs.",
+      "sources": [
+        {
+          "title": "Jackery Explorer 2000 Plus product page (refurbished listing): 2042Wh, LiFePO4, 'not exceeding 3000W', 'up to 6000W', cycle FAQ",
+          "url": "https://www.jackery.com/products/jackery-explorer-2000-plus-portable-power-station-refurbished",
+          "publisher": "Jackery"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ecoflow-river-2-pro",
+      "name": "RIVER 2 Pro",
+      "manufacturer": "EcoFlow",
+      "kind": "power-station",
+      "capacityWh": 768,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 800,
+      "acSurgeWatts": 1600,
+      "cycleLifeTo80": 3000,
+      "notes": "EcoFlow's X-Boost mode is meant for heating appliances like kettles; do not rely on it for medical equipment.",
+      "sources": [
+        {
+          "title": "RIVER 2 Pro product page, 'RIVER 2 Pro Specs'",
+          "url": "https://us.ecoflow.com/products/river-2-pro-portable-power-station",
+          "publisher": "EcoFlow"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ecoflow-delta-2",
+      "name": "DELTA 2",
+      "manufacturer": "EcoFlow",
+      "kind": "power-station",
+      "capacityWh": 1024,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 1800,
+      "acSurgeWatts": 2700,
+      "cycleLifeTo80": 3000,
+      "notes": "Figures are consistent across retailer listings, but EcoFlow's US product page now redirects to DELTA 3, so they were not confirmed from an EcoFlow document.",
+      "sources": [
+        {
+          "title": "Typical specification"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "ecoflow-delta-2-max",
+      "name": "DELTA 2 Max",
+      "manufacturer": "EcoFlow",
+      "kind": "power-station",
+      "capacityWh": 2048,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 2400,
+      "acSurgeWatts": 4800,
+      "cycleLifeTo80": 3000,
+      "notes": "Expandable to 6 kWh with up to two DELTA 2 Max Smart Extra Batteries.",
+      "sources": [
+        {
+          "title": "DELTA 2 Max product page, specs (Capacity, AC Output, Cycle Life)",
+          "url": "https://us.ecoflow.com/products/delta-2-max-portable-power-station",
+          "publisher": "EcoFlow"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "anker-solix-c1000",
+      "name": "SOLIX C1000",
+      "manufacturer": "Anker",
+      "kind": "power-station",
+      "capacityWh": 1056,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 1800,
+      "acSurgeWatts": 2400,
+      "cycleLifeTo80": null,
+      "notes": "Original C1000 (A1761); the C1000 Gen 2 is 1024 Wh. 2400 W is Anker's 'SurgePad' figure for heating appliances. Figures from manual summaries, not confirmed on an Anker page; cycle rating not confirmed.",
+      "sources": [
+        {
+          "title": "Typical specification"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "bluetti-ac180",
+      "name": "AC180",
+      "manufacturer": "BLUETTI",
+      "kind": "power-station",
+      "capacityWh": 1152,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 1800,
+      "acSurgeWatts": 2700,
+      "cycleLifeTo80": 3500,
+      "notes": "BLUETTI rates 3,500+ cycles to 80% capacity. Its 2,700 W 'Power Lifting' mode is for heating appliances, not motors.",
+      "sources": [
+        {
+          "title": "BLUETTI AC180 product page, specs (1152Wh, 4x120V 1800W total, Surge Power 2700W, LiFePO4 3,500+ cycles to 80%)",
+          "url": "https://www.bluettipower.com/products/ac180",
+          "publisher": "BLUETTI"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "bluetti-ac200l",
+      "name": "AC200L",
+      "manufacturer": "BLUETTI",
+      "kind": "power-station",
+      "capacityWh": 2048,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 2400,
+      "acSurgeWatts": 3600,
+      "cycleLifeTo80": 3000,
+      "notes": "Includes a 120 V/30 A TT-30 outlet; expandable with BLUETTI expansion batteries.",
+      "sources": [
+        {
+          "title": "BLUETTI AC200L product page, specs (2,048Wh 51.2V 40Ah, 2,400W total, Surge Power 3,600W, 3,000+ cycles to 80%)",
+          "url": "https://www.bluettipower.com/products/ac200l-portable-power-station",
+          "publisher": "BLUETTI"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "goal-zero-yeti-1500x",
+      "name": "Yeti 1500X",
+      "manufacturer": "Goal Zero",
+      "kind": "power-station",
+      "capacityWh": 1516,
+      "chemistry": "nmc",
+      "acOutputWatts": 2000,
+      "acSurgeWatts": 3500,
+      "cycleLifeTo80": 500,
+      "notes": "Lithium-ion NMC rated 500 cycles to 80% (1C, full cycles, 25°C): fine for occasional outages, less so for daily cycling.",
+      "sources": [
+        {
+          "title": "Goal Zero Yeti 1500X product page, tech specs (battery capacity, cell chemistry, lifecycles, AC inverter)",
+          "url": "https://goalzero.com/products/goal-zero-yeti-1500x-portable-power-station",
+          "publisher": "Goal Zero"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "generic-lifepo4-12v-100ah-inverter",
+      "name": "12 V 100 Ah LiFePO4 battery + inverter",
+      "manufacturer": null,
+      "kind": "battery-inverter",
+      "capacityWh": 1280,
+      "chemistry": "lifepo4",
+      "acOutputWatts": 1000,
+      "acSurgeWatts": 2000,
+      "cycleLifeTo80": null,
+      "notes": "12.8 V x 100 Ah = 1280 Wh, nearly all usable. Use a pure sine wave inverter sized for the largest load, fuse the battery cable, and allow 10-15% inverter loss; inverter size here is a typical example.",
+      "sources": [
+        {
+          "title": "Typical specification"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "generic-agm-12v-100ah-inverter",
+      "name": "12 V 100 Ah AGM deep-cycle battery + inverter",
       "manufacturer": null,
       "kind": "battery-inverter",
       "capacityWh": 1200,
@@ -26,8 +262,32 @@
       "acOutputWatts": 1000,
       "acSurgeWatts": 2000,
       "cycleLifeTo80": null,
-      "notes": "Lead-acid loses capacity at high draw and in the cold.",
-      "sources": [{ "title": "12 V x 100 Ah nominal" }],
+      "notes": "Only about half (≈600 Wh) is usable without shortening battery life, and less at high loads or in the cold. Use a true deep-cycle battery; ResMed warns car starting batteries should not be discharged more than about 30%.",
+      "sources": [
+        {
+          "title": "ResMed Battery guide (198103/4 2015-08), 'Types of batteries' (automotive vs deep-cycle discharge limits)",
+          "url": "https://document.resmed.com/en-au/documents/products/serviceandsupport/battery-guide/battery-guide_glo_eng.pdf",
+          "publisher": "ResMed"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "apc-back-ups-pro-1500",
+      "name": "Back-UPS Pro 1500 (BR1500MS2)",
+      "manufacturer": "APC (Schneider Electric)",
+      "kind": "ups",
+      "capacityWh": 228,
+      "chemistry": "agm",
+      "acOutputWatts": 900,
+      "acSurgeWatts": null,
+      "cycleLifeTo80": null,
+      "notes": "Rated 1500 VA / 900 W. Spec listings give 228-257 VAh of sealed lead-acid battery (lower figure used); not confirmed on APC's site. UPS units bridge minutes, not nights, and their own electronics use power, so small loads run shorter than the battery size suggests.",
+      "sources": [
+        {
+          "title": "Typical specification"
+        }
+      ],
       "verified": false
     }
   ]

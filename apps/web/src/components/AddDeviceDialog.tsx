@@ -185,7 +185,7 @@ export function AddDeviceDialog({ onClose }: { onClose: () => void }) {
                         <span className="catalog-name">{displayName(device)}</span>
                         <span className="catalog-meta">
                           {formatWatts(setting.watts)}
-                          {device.settings.length > 1 ? ` at ${setting.label}` : ''} ·{' '}
+                          {device.settings.length > 1 ? ` (${setting.label})` : ''} ·{' '}
                           {PRIORITY_LABEL[device.priority]}
                           {device.verified ? ' · manual' : ''}
                         </span>
