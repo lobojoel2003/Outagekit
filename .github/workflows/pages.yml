@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.pages.outcome == 'success' }}
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
@@ -30,15 +32,23 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
           BUILD_NUMBER: ${{ github.run_number }}
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - name: Explain how to turn on GitHub Pages
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo "::warning title=GitHub Pages is off::Turn it on once in Settings > Pages > Build and deployment > Source: GitHub Actions, then re-run this workflow."
+          echo '### GitHub Pages is not turned on' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**, then re-run this workflow.' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v4
+        if: steps.pages.outcome == 'success'
         with:
           path: apps/web/dist
 
   deploy:
     needs: build
+    if: needs.build.outputs.enabled == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
