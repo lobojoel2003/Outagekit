@@ -41,7 +41,7 @@ jobs:
           echo "::warning title=GitHub Pages is off::Turn it on once in Settings > Pages > Build and deployment > Source: GitHub Actions, then re-run this workflow."
           echo '### GitHub Pages is not turned on' >> "$GITHUB_STEP_SUMMARY"
           echo 'Go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**, then re-run this workflow.' >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         if: steps.pages.outcome == 'success'
         with:
           path: apps/web/dist
