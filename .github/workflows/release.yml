@@ -105,7 +105,7 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           packages: platform-tools
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
       - run: pnpm install --frozen-lockfile
       - name: Build web assets and sync Capacitor
         run: pnpm --filter @outagekit/web cap:sync
