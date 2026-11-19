@@ -9,6 +9,10 @@ const config: CapacitorConfig = {
     backgroundColor: '#0b1220',
   },
   plugins: {
+    // Draw edge to edge and expose the system bar insets to CSS.
+    SystemBars: {
+      insetsHandling: 'css',
+    },
     LocalNotifications: {
       smallIcon: 'ic_stat_outagekit',
       iconColor: '#F5A524',

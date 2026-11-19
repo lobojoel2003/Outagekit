@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Icon, type IconName } from './components/Icon';
 import { Wordmark } from './components/Logo';
 import { syncNotifications } from './lib/notify';
+import { useInstallPrompt } from './lib/useInstallPrompt';
 import { hrefFor, useRoute, type Route } from './lib/router';
 import { AboutPage } from './pages/AboutPage';
 import { CardPage } from './pages/CardPage';
@@ -42,6 +43,7 @@ function NotificationSync() {
 function Shell() {
   const route = useRoute();
   const { computed } = useStore();
+  const install = useInstallPrompt();
   return (
     <div className={`app ${computed.inOutage ? 'app-outage' : ''}`}>
       <a className="skip-link" href="#main">
@@ -77,6 +79,11 @@ function Shell() {
           Estimates only, not medical advice. In an emergency call 911. Your data stays on this
           device.
         </p>
+        {install && (
+          <button type="button" className="button install-button" onClick={() => void install()}>
+            <Icon name="download" size={18} /> Install Outagekit so it works offline
+          </button>
+        )}
       </footer>
       <NotificationSync />
     </div>

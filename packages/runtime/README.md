@@ -41,7 +41,7 @@ const estimate = estimateRuntime(
   { temperatureC: 5 },
 );
 
-formatDuration(estimate.hours); // e.g. "1 hour 55 minutes"
+formatDuration(estimate.hours); // "1 hour 40 minutes"
 estimate.sources[0]; // usable Wh, draw W, every derating factor
 estimate.warnings; // overload, surge, low charge, cold, worn…
 ```
