@@ -120,12 +120,18 @@ export function HomePage() {
                 ? 'Battery expected to run out at'
                 : 'If the power went out now, it would last until'}{' '}
               <strong>{formatClock(computed.endsAt, now)}</strong>.
-              {computed.leaveAt && (
-                <>
-                  {' '}
-                  Leave by <strong>{formatClock(computed.leaveAt, now)}</strong>.
-                </>
-              )}
+              {computed.leaveAt &&
+                (computed.leaveAt.getTime() - now.getTime() < 60_000 ? (
+                  <>
+                    {' '}
+                    <strong className="leave-now">Leave now.</strong>
+                  </>
+                ) : (
+                  <>
+                    {' '}
+                    Leave by <strong>{formatClock(computed.leaveAt, now)}</strong>.
+                  </>
+                ))}
             </p>
           )}
           {firstSource && firstRuntime && (

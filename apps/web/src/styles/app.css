@@ -406,6 +406,9 @@ main:focus {
   color: var(--ink-2);
   margin-bottom: 8px;
 }
+.leave-now {
+  color: var(--danger);
+}
 .hero-meta {
   color: var(--muted);
   font-size: 15px;
@@ -555,6 +558,10 @@ main:focus {
   .dial-main {
     font-size: 84px;
   }
+}
+.dial .dial-main-long {
+  font-size: clamp(40px, 11vw, 60px);
+  letter-spacing: -0.03em;
 }
 
 .mini-dial {

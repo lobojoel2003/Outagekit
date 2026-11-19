@@ -123,7 +123,10 @@ export function Dial({ hours, endsAt, now, mode, leaveInHours }: DialProps) {
       </svg>
       <figcaption className="dial-readout" aria-hidden="true">
         <span className="dial-caption">{caption}</span>
-        <span className="dial-main" data-testid="dial-main">
+        <span
+          className={`dial-main ${parts.main.length > 4 ? 'dial-main-long' : ''}`}
+          data-testid="dial-main"
+        >
           {parts.main}
         </span>
         {parts.sub && <span className="dial-sub">{parts.sub}</span>}

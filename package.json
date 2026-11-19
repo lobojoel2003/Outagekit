@@ -25,7 +25,7 @@
     "e2e": "pnpm --filter @outagekit/web e2e",
     "catalog:docs": "node scripts/catalog-docs.mjs",
     "version:set": "node scripts/set-version.mjs",
-    "screenshots": "node scripts/screenshots.mjs",
+    "screenshots": "pnpm --filter @outagekit/web screenshots",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test"
   },
   "devDependencies": {

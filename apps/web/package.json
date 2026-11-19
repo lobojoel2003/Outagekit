@@ -18,7 +18,8 @@
     "icons": "node scripts/icons.mjs",
     "cap:sync": "pnpm build:android && cap sync android",
     "android:debug": "pnpm cap:sync && cd android && ./gradlew assembleDebug",
-    "android:release": "pnpm cap:sync && cd android && ./gradlew assembleRelease bundleRelease"
+    "android:release": "pnpm cap:sync && cd android && ./gradlew assembleRelease bundleRelease",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.2",
